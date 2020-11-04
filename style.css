@@ -10,7 +10,7 @@ body {
 }
 .top-left, .top-right{
     grid-row: 1/2;
-    border: 3px solid #000;
+    border: 5px solid #000;
     padding: 17px 32px 17px 17px;
     font-size: 18px;
     display: flex;
@@ -25,7 +25,7 @@ body {
     list-style: none;
     font-weight: 700;
 }
-span {
+#plant {
     display: none;
 }
  h2 {
@@ -66,7 +66,7 @@ span {
         display: grid;
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: 1fr; 
-        height: 100vh; 
+        overflow: hidden;
     }
     #space {
         grid-row: 2/3; 
@@ -105,12 +105,40 @@ span {
         padding: 0;
         margin: 0;
     }
-    .top-left h3, .top-left p{
+    .top-left #logo, .top-left p{
         display: none;
     } 
-    .top-left span {
+    .top-left #plant {
         display: block;
         margin: 0;  
     }
 
 }
+#logo {
+    border: 5px solid #000;
+    padding: 0px;
+    position: relative;
+}
+#logo span{
+    display: flex;
+    position: relative;
+    
+}
+#logo span::after, #logo span::before {
+    content: "";
+    background-color: #000;
+    height: 7px;
+    width: 22px;
+    display: block;
+    margin: 8px 8px 0px 8px;
+}
+/* #logo span::after {
+    position: absolute;
+    
+}
+#logo span::before {
+    position: absolute;
+    
+    
+} */
+
